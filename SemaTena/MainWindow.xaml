@@ -1,9 +1,21 @@
-﻿<Window x:Class="Sematena.Wpf.MainWindow"
+﻿<Window x:Class="Sematena.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="{StaticResource appName}" Height="350" Width="525"
         Closing="OnWindowClosing">
+    <Window.Resources>
+        <Style x:Key="playButtonStyle" TargetType="Button">
+            <Setter Property="Content" Value="{StaticResource play}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=Playing}" Value="True">
+                    <Setter Property="Content" Value="{StaticResource stop}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Button 
+            Command="{Binding Path=PlayCommand, Mode=OneTime}"
+            Style="{StaticResource playButtonStyle}"/>
     </Grid>
 </Window>

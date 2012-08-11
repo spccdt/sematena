@@ -2,4 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib">
     <system:String x:Key="appName">Sematena</system:String>
+    <system:String x:Key="play">Play</system:String>
+    <system:String x:Key="stop">Stop</system:String>
 </ResourceDictionary>

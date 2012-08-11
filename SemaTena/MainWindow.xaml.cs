@@ -14,8 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Sematena.AudioVideoLib;
+using Sematena.ViewModel;
 
-namespace Sematena.Wpf
+namespace Sematena.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -30,6 +31,8 @@ namespace Sematena.Wpf
 
             _avlib = new AvLib();
             _avlib.Initialize();
+
+            DataContext = new PlayerViewModel(_avlib);
         }
 
         private void OnWindowClosing(object sender, CancelEventArgs e)
