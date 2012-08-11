@@ -1,0 +1,4 @@
+﻿AudioVideoLib TODO
+==================
+
+- build a minimal distribution of VLC instead of bundling the whole plugins/ tree
